@@ -40,7 +40,7 @@ More details regarding each layer is provided below.
 
 #### `PacConv2d`
 
-`PacConv2d` is the PAC counterpart of `nn.Conv2d`. It accepts all standard `nn.Conv2d` arguments (e.g. kernel_size, stride, padding, dilation), 
+`PacConv2d` is the PAC counterpart of `nn.Conv2d`. It accepts most standard `nn.Conv2d` arguments (including in_channels, out_channels, kernel_size, bias, stride, padding, dilation, but not groups and padding_mode), 
 and we make sure that when the same arguments are used, `PacConv2d` and `nn.Conv2d` have the exact same output sizes. 
 A few additional optional arguments are available: 
 
@@ -79,8 +79,8 @@ out_pac = pacconv(input, None, guide_k) # alternative interface
 Use `pacconv2d` (in conjunction with `packernel2d`) for its functional interface. 
 
 #### `PacConvTranspose2d`
-`PacConvTranspose2d` is the PAC counterpart of `nn.ConvTranspose2d`. It accepts all standard `nn.ConvTranspose2d` 
-arguments (e.g. kernel_size, stride, padding, output_padding, dilation), and we make sure that when the same arguments are used, 
+`PacConvTranspose2d` is the PAC counterpart of `nn.ConvTranspose2d`. It accepts most standard `nn.ConvTranspose2d` 
+arguments (including in_channels, out_channels, kernel_size, bias, stride, padding, output_padding, dilation, but not groups and padding_mode), and we make sure that when the same arguments are used, 
 `PacConvTranspose2d` and `nn.ConvTranspose2d` have the exact same output sizes. 
 A few additional optional arguments are available: , and also a few additional ones: 
 
@@ -120,8 +120,8 @@ out_pact = pacconvt(input, None, guide_k)   # alternative interface
 Use `pacconv_transpose2d` (in conjunction with `packernel2d`) for its functional interface. 
 
 #### `PacPool2d`
-`PacPool2d` is the PAC counterpart of `nn.AvgPool2d`. It accepts all standard `nn.AvgPool2d` 
-arguments (e.g. kernel_size, stride, padding, dilation), and we make sure that when the same arguments are used, 
+`PacPool2d` is the PAC counterpart of `nn.AvgPool2d`. It accepts most standard `nn.AvgPool2d` 
+arguments (including kernel_size, stride, padding, dilation, but not ceil_mode and count_include_pad), and we make sure that when the same arguments are used, 
 `PacPool2d` and `nn.AvgPool2d` have the exact same output sizes. 
 A few additional optional arguments are available: , and also a few additional ones: 
 
