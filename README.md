@@ -16,7 +16,7 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 * Make sure you have Python>=3.5 (we recommend using a Conda environment). 
 * Add the project directory to your Python paths.
 * Install dependencies:
-    * PyTorch>=0.4 (incl. torchvision) with CUDA: see [PyTorch instructions](https://pytorch.org/get-started/locally/).
+    * PyTorch v0.4-1.1 (incl. torchvision) with CUDA: see [PyTorch instructions](https://pytorch.org/get-started/locally/).
     * Additional libraries: 
         ```bash
         pip install -r requirements.txt
